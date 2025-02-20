@@ -44,6 +44,9 @@ const App: FC<Props> = ({}) => {
          >
             +
          </button>
+         <br />
+         <br />
+         <Outlet />
       </div>
    )
 }

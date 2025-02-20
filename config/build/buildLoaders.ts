@@ -40,7 +40,6 @@ export const buildLoaders = (options: BuildOptions): RuleType[] => {
             options: {
                extract: isProd,
                // spriteFilename: 'sprite.[hash:6].svg',
-               outputPath: 'public/',
             },
          },
          {
@@ -92,11 +91,7 @@ export const buildLoaders = (options: BuildOptions): RuleType[] => {
       use: {
          loader: 'babel-loader',
          options: {
-            presets: [
-               '@babel/preset-env',
-               '@babel/preset-typescript',
-               ['@babel/preset-react', { 'runtime': isDev ? 'automatic' : 'classic' }],
-            ],
+            presets: ['@babel/preset-env', '@babel/preset-typescript', ['@babel/preset-react', { 'runtime': 'automatic' }]],
             plugins: [
                isProd && [
                   removeTestIdPlugin,
