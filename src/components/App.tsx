@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 import * as s from './app.module.scss'
 import { SvgIcon } from '@components/UIKit/SvgIcon/SvgIcon'
 import jpg_image from '@assets/jpg_image.jpg'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 // TODO вернуть импорт
 import '@/icons'
 
@@ -10,10 +10,6 @@ interface Props {}
 
 const App: FC<Props> = ({}) => {
    const [count, setCount] = useState(0)
-
-   const test = (str: string) => {
-      return str
-   }
 
    return (
       <div>

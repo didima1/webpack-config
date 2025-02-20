@@ -8,7 +8,8 @@
     "build:prod": "webpack --env mode=production",
     "build:mobile": "webpack serve --env mode=production platform=mobile",
     "build:desktop": "webpack serve --env mode=production platform=desktop",
-    "generate:sprite:types": "npx tsx scripts/generate-sprites-type.ts"
+    "generate:sprite:types": "npx tsx scripts/generate-sprites-type.ts",
+    "docker:run": "docker build -t webpack-config . && docker run -p 3000:80 webpack-config"
   },
   "keywords": [],
   "author": "",
